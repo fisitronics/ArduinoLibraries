@@ -1,21 +1,3 @@
-/* MAX127.ccp library for Microchip DAC
-   by Aitor Sierra
-   Version: 1.0*/
-
-//  TWBR   prescaler   Frequency
-// 
-//  12       1       400   kHz  (the maximum supported frequency)
-//  32       1       200   kHz
-//  72       1       100   kHz  (default)
-// 152       1        50   kHz
-//  78       4        25   kHz
-// 158       4        12.5 kHz
-
-// To set the prescaler to 4 you need to set the bit TWPS0 in TWSR, so for example to have a clock of 12.5 kHz:
-//TWBR = 158;  
-//TWSR |= _BV (TWPS0);
-
-
 #if defined(ARDUINO) && ARDUINO >= 100
   #include "Arduino.h"
 #else
